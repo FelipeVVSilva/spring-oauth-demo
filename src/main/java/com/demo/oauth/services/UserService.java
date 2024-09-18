@@ -32,9 +32,7 @@ public class UserService implements UserDetailsService{
 			for (UserDetailsProjection projection : result) {
 				user.addRole(new Role(projection.getRoleId(), projection.getAuthority()));
 			}
-			
-			
-			
+			return user;
 		}
 		throw new UsernameNotFoundException("User not found");
 	}
