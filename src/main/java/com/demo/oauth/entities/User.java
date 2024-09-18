@@ -74,6 +74,10 @@ public class User implements UserDetails{
     public void setPassword(String password) {
         this.password = password;
     }
+    public void addRole(Role role) {
+    	roles.add(role);
+    }
+    
     public boolean hasRole(String roleName) {
 		for(Role role : roles) {
 			if(role.getAuthority().equals(roleName)) {
